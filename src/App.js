@@ -1,5 +1,6 @@
-
+import Header from './components/header/Header.component';
 import './App.css';
+
 
 // creating a component
 const greetings = 'Hello to you all';
@@ -13,17 +14,13 @@ const comments = [
 
 function App() {
   return (
-    <div>
-      <h1>{greetings}</h1>
-      <h3>Comments: ({comments.length})</h3>
-      <ul>
-        {
-          comments.map((comment, index) => (
-            <li>{comment.text}</li>
-          ))
-        }
-      </ul>
-    </div>
+
+    <fragment>
+      <Header text = "Revision"/>
+      <div>
+        <h1>{greetings}</h1>
+      </div>
+    </fragment>
   )
 }
 
