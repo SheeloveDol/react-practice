@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+// creating a component
+const greetings = 'Hello to you all';
+
+const comments = [
+  {title: 'One', text: 'I am comment 1'},
+  {title: 'Two', text: 'I am comment 2'},
+  {title: 'Three', text: 'I am comment 3'},
+
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{greetings}</h1>
+      <h3>Comments: ({comments.length})</h3>
+      <ul>
+        {
+          comments.map((comment, index) => (
+            <li>{comment.text}</li>
+          ))
+        }
+      </ul>
     </div>
-  );
+  )
 }
 
 export default App;
