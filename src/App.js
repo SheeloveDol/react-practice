@@ -4,15 +4,16 @@ import './App.css';
 
 // creating a component
 const greetings = 'Hello to you all';
+const goodbye = 'Ok bye for now!'
 
 
 function App() {
   return (
 
     <fragment>
-      <Header text = "Revision" another = "Of React" greet = {greetings} />
+      <Header text = "First Prop" another = "Yet another prop" greet = {greetings} />
       <div>
-        <h1>{greetings}</h1>
+        
       </div>
     </fragment>
   )
