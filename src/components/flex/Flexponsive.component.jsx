@@ -1,31 +1,23 @@
 import { useState } from "react";
 import { Box, Flex, Text, Button } from "@chakra-ui/core";
 
+import Card from "../card/Card.component";
 
-
-const Flexponsive = ({first, second, third}) => {
-    const [label, setLabel] = useState("I am first")
-
-    const handleClick = () => {
-        setLabel("I have been clicked")
-    }
-
+const Flexponsive = ({data}) => {
+    
     return (
         <Flex direction={['column', 'column', 'row' ]}
         align='center'>
-            <Box p='1rem' m='1rem' backgroundColor='gray.200' w='100%' textAlign='center'>
-                <Text>{label}</Text>
-            </Box>
-            <Box p='1rem' m='1rem' backgroundColor='gray.200' w='100%' textAlign='center'>
-                <Text>{second}</Text>
-            </Box>
-            <Box p='1rem' m='1rem' backgroundColor='gray.200' w='100%' textAlign='center'>
-                <Text>{third}</Text>
-            </Box>
+           {
+                data.map(item => <Card key={item.id} p='1rem' m='1rem' backgroundColor='gray.200' w='100%' textAlign='center' >{item.name}</Card>
+                    )
+           }
+           <Card>Hello, I am a card too</Card>
 
-            <Button onClick={handleClick}>Click Me!</Button>
+            <Button >Click Me!</Button>
         </Flex>
     )
 }
 
 export default Flexponsive
+
