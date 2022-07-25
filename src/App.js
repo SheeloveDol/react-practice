@@ -1,6 +1,7 @@
 import Header from './components/header/Header.component';
 import { CSSReset } from '@chakra-ui/core';
-import { Box, ButtonGroup, Button, Spinner } from '@chakra-ui/core';
+import { Box, ButtonGroup, Button, Spinner, Flex } from '@chakra-ui/core';
+import Balance from './components/balance/Balance.component';
 
 
 // creating a component
@@ -11,11 +12,15 @@ const goodbye = 'Ok bye for now!'
 function App() {
   return (
 
-    <Box width='90%'  bg="blue" margin='1rem'>
-      <Header text = "First Prop" another = "Yet another prop" greet = {greetings}  />
-      <Button>Hello</Button>
-      
-    </Box>
+    
+      <Box  bg="orange.100"  mx="auto" w='100%' >
+        <Box border="1px" bg="blue.300" borderColor="black" maxW='30rem' p='0.1rem' mx='auto'>
+          <Balance />
+          <Balance />
+          <Balance />
+        </Box>
+      </Box>
+
   )
 }
 
